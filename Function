@@ -1,0 +1,35 @@
+/////////////////////////////////////////
+function greet(name){
+console.log("Hello, " + name + "!");
+}
+
+greet("Rohit"); // Hello, Rohit!
+
+
+//////////////////////////////////////////////
+
+function add(x+y){
+return x+y;
+}
+
+let sum = add(3,4);
+console.log(sum); // 7
+
+////////////////////////////////////////////////
+Function Expressions
+let multiply = function(x,y){
+return x*y;
+};
+
+let result = multiply(5,3);
+console.log(result);// 15
+
+///////////////////////////////////////////
+Arrrow functions
+let square = (x) => x*x;
+
+let squredValue = square(4);
+console.log(squaredValue);//16
+
+////////////////////////////////////////////////
+
