@@ -1,0 +1,32 @@
+//////////////////////////////////////
+Global Scope
+var globalVariable = 10;
+
+function exampleFunction() {
+    console.log(globalVariable); // Accessible here
+}
+
+exampleFunction();
+console.log(globalVariable); // Accessible here as well
+/////////////////////////////////////////
+Local Scope
+function exampleFunction() {
+    var localVariable = 20;
+    console.log(localVariable); // Accessible here
+}
+
+exampleFunction();
+// console.log(localVariable); // This would cause an error because localVariable is not accessible outside the function
+//////////////////////////////////////////////
+Function Scope
+function exampleFunction() {
+    if (true) {
+        var functionScopedVariable = 50;
+        console.log(functionScopedVariable); // Accessible here
+    }
+
+    console.log(functionScopedVariable); // Accessible here as well
+}
+
+exampleFunction();
+// console.log(functionScopedVariable); // This would cause an error
