@@ -1,0 +1,26 @@
+///////////////////////////////
+Implicit Type Conversion
+let x = 10;        // x is a number
+let y = '5';       // y is a string
+
+let result = x + y; // JavaScript implicitly converts x to a string and performs concatenation
+console.log(result); // Output: '105'
+
+////////////////////////////////
+Explicit Type Conversion:
+let num = 42;
+let str = String(num); // Using String() function
+console.log(str);      // Output: '42'
+
+/////////////////////////////
+let str = '123';
+let num = Number(str); // Using Number() function
+console.log(num);      // Output: 123
+
+//////////////////////////////////////
+let value = 0;
+let booleanValue = Boolean(value); // Using Boolean() function
+console.log(booleanValue);         // Output: false
+
+
+////////////////////////////////////////
