@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetching Example</title>
+    <style>
+        .spinner {
+            /* Styles for the loading spinner */
+        }
+    </style>
+</head>
+<body>
+    <button id="fetchDataButton">Fetch Data</button>
+    <div id="dataContainer"></div>
+    <div id="spinner" class="spinner" style="display: none;">Loading...</div>
+
+    <script>
+        // Function to fetch data from an external API
+        function fetchData(callback) {
+            document.getElementById('spinner').style.display = 'block'; // Show loading spinner
+
+            // Simulate fetching data asynchronously (e.g., making an AJAX request)
+            setTimeout(function() {
+                const data = "Mock data from API";
+                callback(data); // Pass the fetched data to the callback function
+                document.getElementById('spinner').style.display = 'none'; // Hide loading spinner
+            }, 2000); // Simulating a 2-second delay
+        }
+
+        // Callback function to handle the fetched data
+        function displayData(data) {
+            document.getElementById('dataContainer').innerText = data; // Display the fetched data on the webpage
+        }
+
+        // Event listener for the fetch data button
+        document.getElementById('fetchDataButton').addEventListener('click', function() {
+            fetchData(displayData); // Pass the displayData function as a callback to fetchData
+        });
+    </script>
+</body>
+</html>
